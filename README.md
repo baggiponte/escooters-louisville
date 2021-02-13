@@ -1,18 +1,17 @@
 # Analysing Escooters Data in Lousiville
 
-This is an attempt to analyse and mine the open data of the usage of the dockless vehicles in Louisville. I will update the `README` with every new step of the analysis.
+This is an attempt to reproduce an analysis of [Lousville's dockless vehicles open data](https://data.louisvilleky.gov/dataset/dockless-vehicles).
 
-The project is run with Python. There will be some other extensions with other programming languages, notably and very soon in R.
-
-This also happens to be my true first repo, yay!
+The project is written in Python. Another project on [classificatin algorithms](https://github.com/baggiponte/escooters-louisville-r) was developed using R.
 
 ## Structure of the repo
 
-`rawdata/` contains the raw data, while `data/` contains the tidied and modified data. Folders are numbered to match the steps of the analysis.
+`rawdata/` contains the raw data, while `data/` contains the cleaned data. Folders are numbered to match the steps of the analysis.
+
+- In `01-data-cleaning` I collected the scripts for cleaning the data. Notably, I used [`geopandas`](https://geopandas.org/) to intersect each observation with a shapefile of the city and obtain start and end neighborhoods for each trip.
 
 ## To do list
 
-- Add the sources
 - Exploratory Data Analysis [EDA]:
     - Fit new distributions and find the better match
     - Improve the analysis of `TripsDistance`
