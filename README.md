@@ -1,8 +1,10 @@
 # Analysing Escooters Data in Lousiville
 
-This is an attempt to reproduce an analysis of [Lousville's dockless vehicles open data](https://data.louisvilleky.gov/dataset/dockless-vehicles).
+## Premise
 
-The project is written in Python. Another project on [classificatin algorithms](https://github.com/baggiponte/escooters-louisville-r) was developed using R.
+This is an attempt to replicate and expand the analysis of [Lousville's dockless vehicles open data](https://data.louisvilleky.gov/dataset/dockless-vehicles) that I went through with Aldo, Aleksei and Maria Grazia. Kudos to you for this experience together! You can find the original project stored in [this Google Drive folder](https://drive.google.com/drive/folders/1cWw1EG64_ijIEVZGLwZEs3UK0ek6cO6O?usp=sharing).
+
+The project is written in Python. Another project on [classificatin algorithms](https://github.com/baggiponte/escooters-louisville-r) was developed using R and can be viewed via [this blog](https://louisville-dockless-vehicles.rbind.io/), built with [Netlify](https://www.netlify.com/) and [Blogdown](https://bookdown.org/yihui/blogdown/). The code for the blog is also stored in [this GitHub repo](https://github.com/baggiponte/blogdown-escooters-louisville-r).
 
 ## Structure of the repo
 
@@ -12,18 +14,11 @@ The project is written in Python. Another project on [classificatin algorithms](
 
 ## To do list
 
-- Exploratory Data Analysis [EDA]:
-    - Fit new distributions and find the better match
-    - Improve the analysis of `TripsDistance`
+- Exploratory data analysis:
+    - Fit more distributions and find the better match
     - Plot the distributions of `ShortTrip == 0` vs `ShortTrip == 1` and test for their differences!
-- Time Series:
+- Time series:
     - Do a proper TS decomposition and analyse the data with Statsmodels
     - Compare the results of Statsmodels and Prophet
-    - Much more if the geospatial analysis is done!
-- Geospatial analysis:
-    - Learn GeoPandas, load the shapefile and intersect it with the data to filter observations which are out of bounds.
-    - Who knows!
-- Classification:
-    - Implement some classifications models to classify the neighborhood of origin/destination given the data
-
-The real bulk of the project will be the time series analysis (TSA).
+- Geospatial analysis  and (more) classification:
+    - Create a n by n grid to assign each trip to and perform classification using each cell.
